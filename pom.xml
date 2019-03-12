@@ -46,6 +46,12 @@
 					<skip>true</skip>
 				</configuration>
 			</plugin>
+			
+			<!-- 打包成可执行jar包 -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
 		</plugins>
 	</build>
 </project>
