@@ -8,12 +8,17 @@ public class HelloworldController {
 	
 	@RequestMapping("/")
 	public String hello() {
-		return "hello springboot";
+		return "hello springboot world";
 	}
 	
 	@RequestMapping("/hot")
 	public String hotDeployment() {
 		return "hot deployment";
+	}
+	
+	@RequestMapping("/test")
+	public String test() {
+		return "test deployment";
 	}
 	
 }

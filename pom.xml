@@ -21,6 +21,13 @@
     		<groupId>org.springframework.boot</groupId>
     		<artifactId>spring-boot-starter-jetty</artifactId>
 		</dependency>
+		<!-- 
+			springboot热部署：需要将project -> build automatically打开
+		-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
 	</dependencies>
 	
 	<build>
@@ -53,6 +60,10 @@
 			</plugin>
 			
 			<!-- 打包成可执行jar包 -->
+			<!-- 
+				作用：如果不引用该插件，则使用maven install后打包生成的jar包是不能直接运行的
+					使用该插件maven install后生成的jar包是可以直接运行的
+			 -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
