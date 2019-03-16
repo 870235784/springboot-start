@@ -1,10 +1,16 @@
 package com.tca.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.tca.service.IProfileService;
+
 @RestController
 public class HelloworldController {
+	
+	@Autowired
+	private IProfileService profileService;
 	
 	@RequestMapping("/")
 	public String hello() {
@@ -16,9 +22,9 @@ public class HelloworldController {
 		return "hot deployment";
 	}
 	
-	@RequestMapping("/test")
-	public String test() {
-		return "test deployment";
+	@RequestMapping("/profile")
+	public String profile() {
+		return profileService.profileName();
 	}
 	
 }
