@@ -1,24 +1,24 @@
 1.搭建springboot项目
 	1.1 pom文件中添加父项目
 		<parent>
-	    		<groupId>org.springframework.boot</groupId>
-	    		<artifactId>spring-boot-starter-parent</artifactId>
-	    		<version>1.4.0.RELEASE</version>
-    		</parent>
-        1.2 添加springboot相关依赖
-    	        <dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+    		<groupId>org.springframework.boot</groupId>
+    		<artifactId>spring-boot-starter-parent</artifactId>
+    		<version>1.4.0.RELEASE</version>
+    	</parent>
+    1.2 添加springboot相关依赖
+	    <dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-web</artifactId>
+	    </dependency>
 	1.3 添加启动类
 		注意：启动类所在包及其子包里标上注解@Controller @Service @Component @Repository都会被扫描
 
 2.添加插件，将springboot打包成可执行jar包
 	2.1 添加插件
 		<plugin>
-                        <groupId>org.springframework.boot</groupId>
-                        <artifactId>spring-boot-maven-plugin</artifactId>
-                </plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
 
 3.配置application.properties主配置文件
 	3.1 主配置文件必须以application.properties为文件名, 且必须放在src/main/resources类路径下
@@ -49,4 +49,31 @@
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
 		</dependency>
+		
+8.添加mybatis整合
+	8.1 添加mybatis相关jar包依赖
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>1.3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>1.1.0</version>
+		</dependency>
+	8.2 添加Dao接口，添加@Mapper注解
+	8.3 添加数据源配置，添加mapper.xml映射文件扫描
+		#  配置数据源
+		spring.datasource.type=com.alibaba.druid.pool.DruidDataSource
+		spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+		spring.datasource.url=jdbc:mysql://127.0.0.1:3306/test
+		spring.datasource.username=root
+		spring.datasource.password=admin
+		# 映射文件路径
+		mybatis.mapper-locations: classpath:mapper-config/*-mapper.xml
 		
