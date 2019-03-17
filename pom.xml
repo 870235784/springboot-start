@@ -28,16 +28,16 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
+		<!-- 
+			添加jsp相关依赖
+		 -->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+		</dependency>
 	</dependencies>
 	
 	<build>
-		<extensions>
-			<extension>
-				<groupId>kr.motd.maven</groupId>
-				<artifactId>os-maven-plugin</artifactId>
-				<version>1.4.1.Final</version>
-			</extension>
-		</extensions>
 		<plugins>
 			<!-- JDK版本 -->
 			<plugin>
@@ -48,6 +48,7 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
+			
 			<!-- maven插件 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

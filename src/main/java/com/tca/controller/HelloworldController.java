@@ -27,4 +27,9 @@ public class HelloworldController {
 		return profileService.profileName();
 	}
 	
+	@RequestMapping("/encoding")
+	public String encoding() {
+		return "你好";
+	}
+	
 }
