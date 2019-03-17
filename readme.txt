@@ -1,12 +1,12 @@
 1.搭建springboot项目
 	1.1 pom文件中添加父项目
 		<parent>
-	    	<groupId>org.springframework.boot</groupId>
-	    	<artifactId>spring-boot-starter-parent</artifactId>
-	    	<version>1.4.0.RELEASE</version>
-    	</parent>
-    1.2 添加springboot相关依赖
-    	<dependency>
+	    		<groupId>org.springframework.boot</groupId>
+	    		<artifactId>spring-boot-starter-parent</artifactId>
+	    		<version>1.4.0.RELEASE</version>
+    		</parent>
+        1.2 添加springboot相关依赖
+    	        <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
@@ -16,9 +16,9 @@
 2.添加插件，将springboot打包成可执行jar包
 	2.1 添加插件
 		<plugin>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-maven-plugin</artifactId>
-        </plugin>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
 
 3.配置application.properties主配置文件
 	3.1 主配置文件必须以application.properties为文件名, 且必须放在src/main/resources类路径下
