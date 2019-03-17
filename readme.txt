@@ -1,22 +1,52 @@
 1.搭建springboot项目
+	1.1 pom文件中添加父项目
+		<parent>
+	    	<groupId>org.springframework.boot</groupId>
+	    	<artifactId>spring-boot-starter-parent</artifactId>
+	    	<version>1.4.0.RELEASE</version>
+    	</parent>
+    1.2 添加springboot相关依赖
+    	<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+	1.3 添加启动类
+		注意：启动类所在包及其子包里标上注解@Controller @Service @Component @Repository都会被扫描
 
 2.添加插件，将springboot打包成可执行jar包
+	2.1 添加插件
+		<plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
 
 3.配置application.properties主配置文件
+	3.1 主配置文件必须以application.properties为文件名, 且必须放在src/main/resources类路径下
 
 4.添加springboot热部署
-
+	4.1 添加依赖
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+	4.2 需要将project -> build automatically打开
+		
 5.添加错误页面
+	5.1 在src/main/resources类路径下创建目录结构 public》》error》》 ***.html (***与错误码匹配,如404.html)
 
 6.配置多环境
+	6.1 在src/main/resources类路径下创建对应环境的文件, 必须以application-***.properties为文件名
+	6.2 在主配文件application.properties中添加打包时选择的环境模板
+		pring.profiles.active=***
 
 7.添加jsp支持
-	创建web相关目录结构webapp》》WEB-INF》》jsp
-	添加jsp访问前缀和后缀
+	7.1 创建web相关目录结构webapp》》WEB-INF》》jsp
+	7.2 添加jsp访问前缀和后缀
 		spring.mvc.view.prefix=/WEB-INF/jsp/
 		spring.mvc.view.suffix=.jsp
-	添加jar包依赖
+	7.3 添加jar包依赖
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
 		</dependency>
+		
