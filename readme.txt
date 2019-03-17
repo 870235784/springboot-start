@@ -77,3 +77,7 @@
 		# 映射文件路径
 		mybatis.mapper-locations: classpath:mapper-config/*-mapper.xml
 		
+9.事务支持
+	9.1 在启动类上添加@EnableTransactionManagement注解
+	9.2 在方法上添加@Transactional注解
+		
