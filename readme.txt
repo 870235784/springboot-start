@@ -80,4 +80,9 @@
 9.事务支持
 	9.1 在启动类上添加@EnableTransactionManagement注解
 	9.2 在方法上添加@Transactional注解
+	
+10.添加logback日志
+	10.1 在src/main/resources目录下添加日志配置文件logback.xml
+	10.2 在application.properties主配置文件中添加引入日志文件配置
+		logging.config=classpath:logback.xml
 		
