@@ -102,3 +102,13 @@
     	@RunWith(SpringRunner.class)
 		@SpringBootTest(classes = SpringApplicationBoot.class)
 	12.3 单元测试类只需要继承BaseTest即可
+	
+13.添加redis整合
+	13.1 添加相关jar包依赖
+		<dependency>  
+            <groupId>org.springframework.boot</groupId>  
+            <artifactId>spring-boot-starter-data-redis</artifactId>  
+        </dependency>
+    13.2 添加redis.properties配置文件
+    13.3 编写Redis实现工具类, 使用@PropertySource读取配置文件, 使用@Component注册
+	

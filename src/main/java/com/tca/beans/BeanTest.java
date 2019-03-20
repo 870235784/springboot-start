@@ -2,6 +2,8 @@ package com.tca.beans;
 
 public class BeanTest {
 	
+	public BeanTest() {}
+	
 	public BeanTest(String username, String password) {
 		this.username = username;
 		this.password = password;

@@ -1,0 +1,1 @@
+package com.tca.util;import com.alibaba.fastjson.JSONObject;/** * Create by weishuaiding on 2018/12/10 15:21 */public class JsonUtil {    public static <T> String objectToJson(T value) {        return JSONObject.toJSONString(value);    }    public static <T> T jsonToObject(String json, Class<T> clazz) {        return JSONObject.parseObject(json, clazz);    }}
