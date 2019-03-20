@@ -91,3 +91,14 @@
 	11.2 在容器类(@Configuration)中, 方法上添加@Bean标签
 		11.2.1 当前方法的返回值会注册在当前容器中, 类似于spring.xml文件中的<bean>标签
 		11.2.2 返回的类必须被@ComponentScan扫描
+		
+12.添加单元测试
+	12.1 添加相关jar包依赖
+	    <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+    12.2 在src/test/java路径下添加测试基础类BaseTest, 并添加标签
+    	@RunWith(SpringRunner.class)
+		@SpringBootTest(classes = SpringApplicationBoot.class)
+	12.3 单元测试类只需要继承BaseTest即可
