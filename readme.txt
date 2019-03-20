@@ -86,3 +86,8 @@
 	10.2 在application.properties主配置文件中添加引入日志文件配置
 		logging.config=classpath:logback.xml
 		
+11.@Configuration和@Bean
+	11.1 在类上加上@Configuration标签, 则该类就等同于spring.xml文件中的<beans>, 即当前类是一个Spring容器
+	11.2 在容器类(@Configuration)中, 方法上添加@Bean标签
+		11.2.1 当前方法的返回值会注册在当前容器中, 类似于spring.xml文件中的<bean>标签
+		11.2.2 返回的类必须被@ComponentScan扫描
