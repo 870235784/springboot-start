@@ -117,4 +117,13 @@
 	14.2 定义springmvc容器, 并注册自定义拦截器
 		14.2.1 自定义springmvc容器: 自定义类继承WebMvcConfigurationSupport类, 并加上@Configuration标签
 		14.2.2 复写addInterceptors方法, 注册自定义拦截器
+		
+15.添加Servlet整合
+	方式一: (推荐使用)
+		15.1 自定义Servlet继承HttpServlet, 复写doGet和doPost方法, 添加@WebServlet注解
+		15.2 启动类上添加@ServletComponentScan扫描Servlet所在包
+	方式二:
+		配置方式, 较繁琐
+		
+	
 	
