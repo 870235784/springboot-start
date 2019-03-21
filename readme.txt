@@ -111,4 +111,10 @@
         </dependency>
     13.2 添加redis.properties配置文件
     13.3 编写Redis实现工具类, 使用@PropertySource读取配置文件, 使用@Component注册
+    
+14.添加Interceptor拦截器
+	14.1 定义拦截器类MyFirstInterceptor继承HandlerInterceptor类, 复写preHandle, postHandle, afterCompletion方法
+	14.2 定义springmvc容器, 并注册自定义拦截器
+		14.2.1 自定义springmvc容器: 自定义类继承WebMvcConfigurationSupport类, 并加上@Configuration标签
+		14.2.2 复写addInterceptors方法, 注册自定义拦截器
 	
