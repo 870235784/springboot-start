@@ -75,7 +75,7 @@
 		spring.datasource.username=root
 		spring.datasource.password=admin
 		# 映射文件路径
-		mybatis.mapper-locations: classpath:mapper-config/*-mapper.xml
+		mybatis.mapper-locations: classpath:mapper-config/*.xml
 		
 9.事务支持
 	9.1 在启动类上添加@EnableTransactionManagement注解
