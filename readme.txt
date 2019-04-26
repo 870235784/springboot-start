@@ -64,7 +64,7 @@
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid-spring-boot-starter</artifactId>
-			<version>1.1.0</version>
+			<version>1.1.13</version>
 		</dependency>
 	8.2 添加Dao接口，添加@Mapper注解
 	8.3 添加数据源配置，添加mapper.xml映射文件扫描
