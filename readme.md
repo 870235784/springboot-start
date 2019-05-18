@@ -35,9 +35,18 @@
 	5.1 在src/main/resources类路径下创建目录结构 public》》error》》 ***.html (***与错误码匹配,如404.html)
 
 6.配置多环境
-	6.1 在src/main/resources类路径下创建对应环境的文件, 必须以application-***.properties为文件名
-	6.2 在主配文件application.properties中添加打包时选择的环境模板
-		pring.profiles.active=***
+	方案一：打包成多环境
+		6.1 在src/main/resources类路径下创建对应环境的文件, 必须以application-***.properties为文件名
+		6.2 在主配文件application.properties中添加打包时选择的环境模板
+			pring.profiles.active=***
+	方案二：启动时多环境
+		6.1 在src/main/resources类路径下创建对应环境的文件, 必须以application-***.properties为文件名
+		6.2 打包
+		6.3 选择运行时配置文件启动
+			java -jar ***.jar --pring.profiles.active=***
+			
+		
+	
 
 7.添加jsp支持
 	7.1 创建web相关目录结构webapp》》WEB-INF》》jsp
